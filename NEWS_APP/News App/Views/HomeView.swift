@@ -91,7 +91,7 @@ struct HomeView: View {
                                         .onTapGesture {
                                             load(url: item.url)
                                         }
-                                        .background(Color.white) // Set the background color to white for each item
+                                        .background(Color.white) 
                                 }
                                 
                             }.padding()

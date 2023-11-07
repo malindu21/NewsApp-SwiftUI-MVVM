@@ -15,7 +15,7 @@ protocol NewsService {
 
 struct  NewsServiceImpl: NewsService {
     func request(from endpoint: NewsAPI) -> AnyPublisher<NewsResponse, APIError>{
-        let dataKu = endpoint.urlRequest
+       
         return URLSession
             .shared 
             .dataTaskPublisher(for: endpoint.urlRequest)
@@ -46,6 +46,6 @@ struct  NewsServiceImpl: NewsService {
                 }
                 
             }
-            .eraseToAnyPublisher()//
+            .eraseToAnyPublisher()
     }
 }

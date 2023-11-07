@@ -55,8 +55,6 @@ struct NavHostView: View {
     }
 }
 
-// The rest of your code remains the same
-
 
 struct TabContent: View {
     @Binding var selectedTab: Int
@@ -117,7 +115,7 @@ struct News_AppApp: App {
         let urlImageService = URLImageService(fileStore: URLImageFileStore(),
                                               inMemoryStore: URLImageInMemoryStore())
         return WindowGroup {
-            NavHostView()
+            LoginView()
                 .environment(\.urlImageService, urlImageService)
         }
     }
